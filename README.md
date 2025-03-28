@@ -4,12 +4,12 @@
 1. Composer Install
 2. Membuat database dengan konfigurasi 
 
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=(database yang dibuat)
-DB_USERNAME=root
-DB_PASSWORD=
+<p>DB_CONNECTION=mysql</p>
+<p>DB_HOST=127.0.0.1</p>
+<p>DB_PORT=3306</p>
+<p>DB_DATABASE=(database yang dibuat)</p>
+<p>DB_USERNAME=root</p>
+<p>DB_PASSWORD=</p>
 
 3. Setelah konfigurasi database 
 4. Jalankan perintah 'php artisan migrate'
