@@ -1,0 +1,291 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Swagger with Laravel",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/approval-stages": {
+            "get": {
+                "tags": [
+                    "Approval-stages"
+                ],
+                "summary": "Data approval stages",
+                "description": "Create a new approval stages in the system",
+                "operationId": "042d956a9fad73e84de890d02a0a497c",
+                "responses": {
+                    "200": {
+                        "description": "approval stages successfully"
+                    },
+                    "422": {
+                        "description": "Validation Error"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Approval-stages"
+                ],
+                "summary": "Create a new approval stages",
+                "description": "Create a new approval stages in the system",
+                "operationId": "52989e6a14178a727bcc848e3acf8044",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "approver_id"
+                                ],
+                                "properties": {
+                                    "approver_id": {
+                                        "type": "integer",
+                                        "example": "1"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "approval stages created successfully"
+                    },
+                    "422": {
+                        "description": "Validation Error"
+                    }
+                }
+            }
+        },
+        "/api/approval-stages/{id}": {
+            "put": {
+                "tags": [
+                    "Approval-stages-update"
+                ],
+                "summary": "Update a approval stages",
+                "description": "Update a approval stages in the system",
+                "operationId": "09e3ea8a8b87944defd865cd349851f9",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "approver_id"
+                                ],
+                                "properties": {
+                                    "approver_id": {
+                                        "type": "integer",
+                                        "example": "1"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "approval stages update successfully"
+                    },
+                    "422": {
+                        "description": "Validation Error"
+                    }
+                }
+            }
+        },
+        "/api/approvers": {
+            "post": {
+                "tags": [
+                    "Approvers"
+                ],
+                "summary": "Create a new approvers",
+                "description": "Create a new approvers in the system",
+                "operationId": "6146e0b64473c3ab330c2b9d74f607d8",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "name"
+                                ],
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "example": "John Doe"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "approvers created successfully"
+                    },
+                    "422": {
+                        "description": "Validation Error"
+                    }
+                }
+            }
+        },
+        "/api/expense": {
+            "get": {
+                "tags": [
+                    "expense"
+                ],
+                "summary": "Data expense ",
+                "description": "Data expense",
+                "operationId": "c2f7318879c71e9158a41a6538ed62b9",
+                "responses": {
+                    "200": {
+                        "description": "expense successfully"
+                    },
+                    "422": {
+                        "description": "Validation Error"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "expense"
+                ],
+                "summary": "Create a new expense ",
+                "description": "Create a new expense  in the system",
+                "operationId": "4396f0b5d5a6eac4abc24a99fe697384",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "amount"
+                                ],
+                                "properties": {
+                                    "amount": {
+                                        "type": "integer",
+                                        "example": "1"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "expense  created successfully"
+                    },
+                    "422": {
+                        "description": "Validation Error"
+                    }
+                }
+            }
+        },
+        "/api/expense/{id}/approve": {
+            "patch": {
+                "tags": [
+                    "expense-approval"
+                ],
+                "summary": "Expense approval",
+                "description": "Expense approval in the system",
+                "operationId": "0f0e2c1429c68a501c51d0ec036bc700",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "approver_id"
+                                ],
+                                "properties": {
+                                    "approver_id": {
+                                        "type": "integer",
+                                        "example": "1"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "approval stages update successfully"
+                    },
+                    "422": {
+                        "description": "Validation Error"
+                    }
+                }
+            }
+        },
+        "/api/expense/{id}": {
+            "get": {
+                "tags": [
+                    "expense-detail"
+                ],
+                "summary": "Expense detail",
+                "description": "Expense detail in the system",
+                "operationId": "2e4429f218e5fd66e01fd04f38cad3a5",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "approval stages update successfully"
+                    },
+                    "422": {
+                        "description": "Validation Error"
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Approval-stages",
+            "description": "Approval-stages"
+        },
+        {
+            "name": "Approval-stages-update",
+            "description": "Approval-stages-update"
+        },
+        {
+            "name": "Approvers",
+            "description": "Approvers"
+        },
+        {
+            "name": "expense",
+            "description": "expense"
+        },
+        {
+            "name": "expense-approval",
+            "description": "expense-approval"
+        },
+        {
+            "name": "expense-detail",
+            "description": "expense-detail"
+        }
+    ]
+}
